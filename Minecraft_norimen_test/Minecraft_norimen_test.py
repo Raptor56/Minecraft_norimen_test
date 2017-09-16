@@ -82,7 +82,7 @@ while i < w:
 
     elif List[j - 1][i - 1] == 0:   #対象ブロックが実体で、崖判定ブロックが空気なら崖と判定し以上のブロックを削除、横へ移動
 
-        print("Del_Blokc")
+        print("Del_Block")
         Del_Block(List,i,j)
         i += 1
 
