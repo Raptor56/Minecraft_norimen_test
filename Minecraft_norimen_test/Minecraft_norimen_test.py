@@ -62,7 +62,7 @@ for j in reversed(range(0,h)):
 print()
 
 
-List_root = copy.deepcopy(List)         #対象ブロックの移動経路追跡用リスト
+List_route = copy.deepcopy(List)         #対象ブロックの移動経路追跡用リスト
 
 count = 0
 
@@ -72,7 +72,7 @@ j = 1
 while i < w:
 
     count += 1
-    List_root[j][i] = 2             #対象ブロックの移動経路追跡用 "2"の場所が判定対象ブロックの移動経路
+    List_route[j][i] = 2             #対象ブロックの移動経路追跡用 "2"の場所が判定対象ブロックの移動経路
     print("【",i,j,"】\n",List[j][i-1],List[j][i],"\n",List[j-1][i-1])
 
     if List[j][i] == 0:             #対象ブロックが空気なら横へ移動し、次のブロックの処理へ
@@ -95,7 +95,7 @@ for j in reversed(range(0,h)):
 print()
 
 for j in reversed(range(0,h)):
-    print(List_root[j])
+    print(List_route[j])
 
 print("\nstep_count =",count)
 
